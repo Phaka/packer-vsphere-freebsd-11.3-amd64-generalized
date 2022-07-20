@@ -10,6 +10,11 @@ variable "packer_password_hashed" {
   type = string
 }
 
+//variable "packer_authorized_key" {
+//  type = string
+//  default = ""
+//}
+
 variable "ssh_password" {
   type = string
 }
@@ -22,6 +27,11 @@ variable "ssh_username" {
   type = string
   default = "root"
 }
+
+//variable "ssh_authorized_key" {
+//  type = string
+//  default = ""
+//}
 
 variable "vcenter_username" {
   type = string

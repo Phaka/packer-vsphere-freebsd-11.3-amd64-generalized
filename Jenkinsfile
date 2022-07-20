@@ -23,11 +23,13 @@ pipeline {
         // Credentials to access the virtual machine once installed
         PKR_VAR_ssh_password = credentials('packer-ssh-password')
         PKR_VAR_ssh_password_hashed = credentials('packer-ssh-password-hashed')
+        //PKR_VAR_ssh__authorized_key = credentials('packer-ssh-authorized-key')
 
         // Credentials of the user to create to specialize the virtual machine afterwards
         PKR_VAR_packer_username = credentials('packer-username')
         PKR_VAR_packer_password = credentials('packer-password')
         PKR_VAR_packer_password_hashed = credentials('packer-password-hashed')
+        //PKR_VAR_packer_authorized_key = credentials('packer-authorized-key')
 
         // The server where we can access the ISOs. This can be a local path to the vSphere server or a remote URL.
         
