@@ -1,0 +1,19 @@
+---
+# playbook.yml
+- hosts: all
+  become: yes
+  vars:
+    ansible_python_interpreter: /usr/local/bin/python3
+    username: "packer"
+    password: "P@ck3r"
+  tasks:
+    - name: Install Packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - nano
+
+    - name: Set timezone.
+      timezone:
+        name: "America/Los_Angeles"
